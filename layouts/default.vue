@@ -20,6 +20,8 @@ export default {
   mounted() {
     if (window.location.pathname !== '/') {
       this.showNavBar = true
+    } else {
+      this.showNavBar = false
     }
     window.addEventListener('scroll', this.onScroll)
   },
@@ -35,15 +37,9 @@ export default {
           // TODO: SET TO FALSE TO ENABLE THE NAVBAR
           this.showNavBar = false
         }
-      } else {
-        this.showNavBar = true
       }
     }
   }
 }
 </script>
-<style scoped>
-.pages {
-  margin-top: 60px;
-}
-</style>
+<style scoped></style>

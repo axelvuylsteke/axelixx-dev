@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="webdev">
     <SkillsLeft content-text="SOME TEXT LEFT" content-title="TITLE" />
     <SkillsRight content-text="SOME TEXT RIGHT" content-title="TITLE" />
   </div>
@@ -17,4 +17,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.webdev {
+  margin-top: 60px;
+}
+</style>
