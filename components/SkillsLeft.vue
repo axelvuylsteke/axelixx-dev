@@ -1,17 +1,20 @@
 <template>
   <div>
-    <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+    <b-card no-body class="overflow-hidden skillcardleft">
       <b-row no-gutters>
         <b-col md="6">
-          <b-card-img
-            src="~/static/vue.png"
-            class="rounded-0 cardImg
-          "
-          />
+          <b-link :href="content.contentLink">
+            <figure class="figureimg">
+              <b-card-img
+                :src="require(`~/static/${content.contentPic}`)"
+                class="rounded-0 cardimg"
+              />
+            </figure>
+          </b-link>
         </b-col>
         <b-col md="6">
-          <b-card-body :title="contentTitle">
-            <b-card-text>{{ contentText }}</b-card-text>
+          <b-card-body :title="content.contentTitle">
+            <b-card-text>{{ content.contentText }}</b-card-text>
           </b-card-body>
         </b-col>
       </b-row>
@@ -29,9 +32,44 @@ export default {
     contentTitle: {
       type: String,
       default: ''
+    },
+    contentPic: {
+      type: String,
+      default: ''
+    },
+    contentLink: {
+      type: String,
+      default: ''
     }
-  }
+  },
+  data() {
+    return { content: {} }
+  },
+  created() {
+    this.content.contentText = this.contentText
+    this.content.contentTitle = this.contentTitle
+    this.content.contentPic = this.contentPic
+    this.content.contentLink = this.contentLink
+  },
+  methods: {}
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.skillcardleft {
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 5rem;
+  border: none;
+}
+.figureimg {
+  background: #21c7a8;
+}
+.cardimg {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.figureimg:hover .cardimg {
+  opacity: 0.5;
+}
+</style>

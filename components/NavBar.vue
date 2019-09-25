@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar class="navigation" fixed="top" toggleable="lg">
-      <b-navbar-brand class="brand" to="/">
+      <b-navbar-brand class="brand" to="/" href="#landingImage">
         AV
       </b-navbar-brand>
       <b-navbar-toggle target="collapse-nav" />
