@@ -60,16 +60,18 @@ export default {
   max-width: 75%;
   margin: auto;
   margin-bottom: 5rem;
-  border: none;
-}
-.figureimg {
-  background: #21c7a8;
-}
-.cardimg {
-  opacity: 1;
-  transition: 0.3s ease-in-out;
+  padding: 1rem;
 }
 .figureimg:hover .cardimg {
-  opacity: 0.5;
+  opacity: 1;
+  animation: flash 1.5s;
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

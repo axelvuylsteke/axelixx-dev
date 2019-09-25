@@ -8,10 +8,14 @@
           </b-card-body>
         </b-col>
         <b-col md="6">
-          <b-card-img
-            :src="require(`~/static/${content.contentPic}`)"
-            class="rounded-0 cardImg"
-          />
+          <b-link :href="content.contentLink">
+            <figure class="figureimg">
+              <b-card-img
+                :src="require(`~/static/${content.contentPic}`)"
+                class="rounded-0 cardimg"
+              />
+            </figure>
+          </b-link>
         </b-col>
       </b-row>
     </b-card>
@@ -56,5 +60,18 @@ export default {
   max-width: 75%;
   margin: auto;
   margin-bottom: 5rem;
+  padding: 1rem;
+}
+.figureimg:hover .cardimg {
+  opacity: 1;
+  animation: flash 1.5s;
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
