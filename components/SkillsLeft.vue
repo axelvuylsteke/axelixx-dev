@@ -22,13 +22,13 @@
     <b-link :href="skill.link">
       <b-card
         overlay
-        img-src="https://picsum.photos/900/250/?image=3"
+        :img-src="require(`~/static/${skill.picLink}`)"
         img-alt="Card Image"
         text-variant="white"
         :title="`${skill.title}`"
         class="cardimg"
       >
-        <b-card-text>
+        <b-card-text class="bodytext">
           {{ skill.body }}
         </b-card-text>
       </b-card>
@@ -55,6 +55,7 @@ export default {
   margin-bottom: 5rem;
   padding: 1rem;
 }
+
 .figureimg:hover .cardimg {
   opacity: 1;
   animation: flash 1.5s;

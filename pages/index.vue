@@ -23,6 +23,9 @@ export default {
     webdev,
     testing,
     contact
+  },
+  mounted() {
+    this.$store.dispatch('webdevskills/fetchSkillsContentful')
   }
 }
 </script>

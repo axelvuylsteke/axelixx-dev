@@ -22,7 +22,6 @@ export default {
   }),
   async fetch({ store, error }) {
     try {
-      console.log('STARTING FETCHING')
       await store.dispatch('webdevskills/fetchSkillsContentful')
     } catch (err) {
       error({

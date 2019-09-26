@@ -42,4 +42,8 @@ export default {
   }
 }
 </script>
-<style scoped></style>
+<style scoped>
+.pages {
+  background-color: #122d42;
+}
+</style>
