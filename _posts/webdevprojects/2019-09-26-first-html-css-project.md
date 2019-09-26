@@ -1,6 +1,0 @@
----
-title: First HTML/CSS project
-link: 'https://nifty-heisenberg-99b0ca.netlify.com/'
-picLink: html_css.jpg
----
-My first CSS/HTML project made a few months ago. Following along the tutorial on Udemy for a full stack web developer course.

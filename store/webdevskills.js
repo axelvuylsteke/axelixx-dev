@@ -11,7 +11,14 @@ export const mutations = {
 }
 
 export const actions = {
-  fetchSkillsContentful({ commit }) {}
+  async fetchSkillsContentful({ commit }) {
+    const files = await require.context(
+      '~/assets/content/webdevprojects/',
+      false,
+      /\.json$/
+    )
+    console.log(files)
+  }
 }
 
 export default {
