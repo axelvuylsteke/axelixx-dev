@@ -1,57 +1,34 @@
 <template>
-  <div>
-    <b-card no-body class="overflow-hidden skillcardleft">
-      <b-row no-gutters>
-        <b-col md="6">
-          <b-link :href="content.contentLink">
-            <figure class="figureimg">
-              <b-card-img
-                :src="require(`~/static/${content.contentPic}`)"
-                class="rounded-0 cardimg"
-              />
-            </figure>
-          </b-link>
-        </b-col>
-        <b-col md="6">
-          <b-card-body :title="content.contentTitle">
-            <b-card-text>{{ content.contentText }}</b-card-text>
-          </b-card-body>
-        </b-col>
-      </b-row>
-    </b-card>
-  </div>
+  <b-card no-body class="overflow-hidden skillcardleft">
+    <b-row no-gutters>
+      <b-col md="6">
+        <b-link :href="skill.picLink">
+          <figure class="figureimg">
+            <b-card-img
+              :src="require(`~/static/${skill.link}`)"
+              class="rounded-0 cardimg"
+            />
+          </figure>
+        </b-link>
+      </b-col>
+      <b-col md="6">
+        <b-card-body :title="skill.title">
+          <b-card-text>{{ skill.body }}</b-card-text>
+        </b-card-body>
+      </b-col>
+    </b-row>
+  </b-card>
 </template>
 
 <script>
 export default {
   props: {
-    contentText: {
-      type: String,
-      default: ''
-    },
-    contentTitle: {
-      type: String,
-      default: ''
-    },
-    contentPic: {
-      type: String,
-      default: ''
-    },
-    contentLink: {
-      type: String,
-      default: ''
-    }
+    // eslint-disable-next-line vue/require-default-prop
+    skill: Object
   },
   data() {
-    return { content: {} }
-  },
-  created() {
-    this.content.contentText = this.contentText
-    this.content.contentTitle = this.contentTitle
-    this.content.contentPic = this.contentPic
-    this.content.contentLink = this.contentLink
-  },
-  methods: {}
+    return {}
+  }
 }
 </script>
 

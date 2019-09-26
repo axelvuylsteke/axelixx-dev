@@ -1,32 +1,24 @@
 <template>
   <div class="webdev">
-    <!-- <SkillsLeft
-      class="skill"
-      content-text="My first CSS/HTML project made a few months ago. Following along the tutorial on Udemy for a full stack web developer course."
-      content-title="First HTML/CSS project"
-      content-pic="html_css.jpg"
-      content-link="https://nifty-heisenberg-99b0ca.netlify.com/"
+    <SkillsLeft
+      v-for="(skill, index) in skills"
+      :key="skill.slug"
+      :skill="skill"
+      :data-index="index"
     />
-    <SkillsRight
-      content-text="My first CSS/HTML project made a few months ago. Following along the tutorial on Udemy for a full stack web developer course"
-      content-title="First HTML/CSS project"
-      content-pic="html_css.jpg"
-      content-link="https://nifty-heisenberg-99b0ca.netlify.com/"
-    /> -->
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-// import SkillsLeft from '@/components/SkillsLeft.vue'
-// import SkillsRight from '@/components/SkillsRight.vue'
+import SkillsLeft from '@/components/SkillsLeft.vue'
+
 export default {
   components: {
-    // SkillsLeft,
-    // SkillsRight
+    SkillsLeft
   },
   computed: mapState({
-    skills: (state) => state.skills.skills
+    skills: (state) => state.webdevskills.skills
   }),
   async fetch({ store, error }) {
     try {
@@ -35,7 +27,7 @@ export default {
     } catch (err) {
       error({
         statusCode: 503,
-        message: 'Unable to fetch skills from contentful'
+        message: 'Unable to fetch skills from Netlify'
       })
     }
   }

@@ -12,12 +12,17 @@ export const mutations = {
 
 export const actions = {
   async fetchSkillsContentful({ commit }) {
-    const files = await require.context(
+    const files = require.context(
       '~/assets/content/webdevprojects/',
       false,
       /\.json$/
     )
-    console.log(files)
+    const skills = files.keys().map((key) => {
+      const res = files(key)
+      res.slug = key.slice(2, -5)
+      return res
+    })
+    await commit('SETSKILLS', skills)
   }
 }
 
