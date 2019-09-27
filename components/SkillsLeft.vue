@@ -1,23 +1,4 @@
 <template>
-  <!-- <b-card no-body class="overflow-hidden skillcardleft">
-    <b-row no-gutters>
-      <b-col md="6">
-        <b-link :href="skill.link">
-          <figure class="figureimg">
-            <b-card-img
-              :src="require(`~/static/${skill.picLink}`)"
-              class="rounded-0 cardimg"
-            />
-          </figure>
-        </b-link>
-      </b-col>
-      <b-col md="6">
-        <b-card-body :title="skill.title">
-          <b-card-text>{{ skill.body }}</b-card-text>
-        </b-card-body>
-      </b-col>
-    </b-row>
-  </b-card> -->
   <figure class="figureimg">
     <b-link :href="skill.link">
       <b-card

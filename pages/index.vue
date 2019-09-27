@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import LandingImage from '@/components/LandingImage.vue'
 import ScrollDownIndicator from '@/components/ScrollDownIndicator.vue'
 import webdev from '@/pages/webdev.vue'
@@ -24,6 +25,9 @@ export default {
     testing,
     contact
   },
+  computed: mapState({
+    skills: (state) => state.webdevskills.skills
+  }),
   mounted() {
     this.$store.dispatch('webdevskills/fetchSkillsContentful')
   }
