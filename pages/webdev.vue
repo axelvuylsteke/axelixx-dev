@@ -43,7 +43,7 @@ export default {
   position: relative;
   padding-top: 80px;
   background-color: #122d42;
-  display: flex;
   justify-content: space-evenly;
+  display: flex;
 }
 </style>

@@ -49,7 +49,7 @@ export default {
   position: relative;
   top: 10%;
   width: 300px;
-  height: 500px;
+  height: 600px;
   perspective: 900px;
   margin-bottom: 5rem;
 }
@@ -62,6 +62,8 @@ export default {
   box-shadow: 0px 20px 50px #555;
   animation: entry 0.7s linear 1;
   border-radius: 10px;
+  width: 300px;
+  height: 600px;
 }
 .container:hover {
   cursor: pointer;
