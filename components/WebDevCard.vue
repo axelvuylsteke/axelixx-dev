@@ -10,7 +10,6 @@
             {{ skill.title }}
           </h3>
           <p>{{ skill.body }}</p>
-          <p>{{ skill.link }}</p>
         </div>
       </div>
     </b-link>
