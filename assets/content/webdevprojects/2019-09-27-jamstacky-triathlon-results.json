@@ -1,6 +1,6 @@
 {
   "title": "JAMstacky Triathlon Results",
-  "piclink": "nuxt_firebase_vue.svg",
+  "piclink": "nuxt_firebase_vuetify.svg",
   "link": "https://angry-mayer-c194cc.netlify.com/",
   "body": "A webapp that is based on a JAMstack approach for Triathlon Results and in the future most likely expanded to more functionality. However now this is a CRUD webapp that is serverless based on Nuxt.js. It includes FireStore, Cloudless Functions, Firebase Authentication,... to handle the functionality. UI components are mostly used from Vuetify. "
 }
