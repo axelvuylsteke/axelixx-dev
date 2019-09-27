@@ -3,7 +3,7 @@
     <b-link class="linking" :href="skill.link">
       <div id="c0" class="container" :style="colorCard">
         <div class="image">
-          {{ skill.piclink }}
+          <b-img :src="require(`~/static/${skill.piclink}`)" />
         </div>
         <div class="description">
           <h3 class="title">
@@ -70,6 +70,7 @@ export default {
   z-index: 400;
   animation: flash 1.5s;
 }
+
 #c0 {
   position: relative;
   top: 0%;
