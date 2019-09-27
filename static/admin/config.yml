@@ -9,7 +9,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 collections: 
   - name: "WebDevProjects"
-    label: "Projects"
+    label: "WebDevProjects"
     folder: "assets/content/webdevprojects"
     format: "json"
     create: true
