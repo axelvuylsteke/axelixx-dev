@@ -16,5 +16,6 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "SVG", name: "piclink", widget: "markdown"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
